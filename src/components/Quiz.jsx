@@ -1,11 +1,24 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import questions from "../Helpers/QuestionsData";
+import { QuizContext } from "../Helpers/Contexts";
 
 function Quiz() {
+  const { setGameScore } = useContext(QuizContext);
+  const { setGameState } = useContext(QuizContext);
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
 
-  const handleNextQuestion = () => {};
+  const handleNextQuestion = () => {
+    if (optionChosen === questions[currentQuestion].answer) {
+      setGameScore((prevState) => prevState + 1);
+    }
+    if (currentQuestion === questions.length - 1) {
+      setGameState("endScreen");
+    } else {
+      setCurrentQuestion((prevState) => prevState + 1);
+    }
+  };
 
   return (
     <div className="Quiz">
