@@ -8,13 +8,16 @@ import { QuizContext } from "./Helpers/Contexts";
 
 function App() {
   const [gameState, setGameState] = useState("menu");
+  const [gameScore, setGameScore] = useState(0);
 
   return (
     <main className="App">
       <header>
         <h1>Quiz App</h1>
       </header>
-      <QuizContext.Provider value={{ gameState, setGameState }}>
+      <QuizContext.Provider
+        value={{ gameState, setGameState, gameScore, setGameScore }}
+      >
         {gameState === "menu" && <Menu />}
         {gameState === "quiz" && <Quiz />}
         {gameState === "endScreen" && <EndScreen />}
