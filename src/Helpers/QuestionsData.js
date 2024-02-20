@@ -5,7 +5,7 @@ const questions = [
     optionB: "The Amazon River",
     optionC: "The Mekong",
     optionD: "The Nile",
-    answer: "optionD",
+    answer: "D",
   },
   {
     text: "What country has the most islands in the world?",
@@ -13,7 +13,7 @@ const questions = [
     optionB: "Canada",
     optionC: "Finland",
     optionD: "Philippines",
-    answer: "optionC",
+    answer: "C",
   },
   {
     text: "What’s the smallest country in the world?",
@@ -21,7 +21,7 @@ const questions = [
     optionB: "Qatar",
     optionC: "Iceland",
     optionD: "Liechtenstein",
-    answer: "optionA",
+    answer: "A",
   },
 ];
 
