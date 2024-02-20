@@ -1,0 +1,20 @@
+.Menu {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #fcff82;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menu button {
+  color: white;
+  font-size: 1.5rem;
+  width: 300px;
+  padding: 15px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #53a8b6;
+  cursor: pointer;
+}
